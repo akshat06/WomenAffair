@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3><pre>External Marital Affair Prediction</pre></h3>
+
+<div>
+  <form action="/predict" method="POST">
+    <label for="marriage">Marriage Rating</label>
+<!--    <input class="form-input" type="text" id="rate_marriage" name="rate_marriage" placeholder="1 = very poor , 2 = poor , 3 = fair ,4 = good ,5 = very good">-->
+<!--    <input type="number" id="crim" name="CRIM" placeholder="Enter Value for CRIM..">-->
+    <select id="marriage" name="marriage">
+    <option value = 1> Very Poor
+    </option>
+    <option value = 2> Poor
+    </option>
+    <option value = 3> Fair
+    </option>
+    <option value = 4> Good
+    </option>
+    <option value = 5> Very Good
+    </option>
+    </select>
+    <label for="age">Age</label>
+    <input class="form-input" type="text" id="age" name="age" placeholder="Age in Years..">
+
+    <label for="yrs_married">Years Married</label>
+    <input class="form-input" type="text" id="yrs_married" name="yrs_married" placeholder="How Long is the Person Married?..">
+
+    <label for="children">Children</label>
+    <input class="form-input" type="text" id="children" name="children" placeholder="How many Children person is having?..">
+
+    <label for="religious">Religious</label>
+<!--    <input class="form-input" type="text" id="religious" name="religious" placeholder="How Religious the Person is 1=not, 2=mildly, 3=fairly, 4=strongly">-->
+    <select id="religious" name="religious">
+    <option value = 1> Not
+    </option>
+    <option value = 2> Mildly
+    </option>
+    <option value = 3> Fairly
+    </option>
+    <option value = 4> Strongly
+    </option>
+    </select>
+    <label for="education">Level of Education</label>
+    <select id="education" name="education">
+    <option value = 9> Grade School
+    </option>
+    <option value = 12> High School
+    </option>
+    <option value = 14> Some College
+    </option>
+    <option value = 16> College Graduate
+    </option>
+    <option value = 17> Some Graduate School
+    </option>
+    <option value = 20> Advanced Degree
+    </option>
+    </select>
+<!--    <input class="form-input" type="text" id="edu" name="edu" placeholder="How Educated the Person is 9 = grade school, 12 = highschool, 14 = some college, 16 = college graduate, 17 = some graduate school, 20 = advanced degree">-->
+
+    <label for="occupation">Occupation</label>
+    <select id="occupation" name="occupation">
+    <option value = 1> Student
+    </option>
+    <option value = 2> Farming,agriculture; semi-skilled, or unskilled worker;
+    </option>
+    <option value = 3> White-collar
+    </option>
+    <option value = 4> Teacher counselor social worker,nurse; artist, writers; technician, skilled worker
+    </option>
+    <option value = 5> Manegarial, administrative, business
+    </option>
+    <option value = 6> Professional with Advanced Degree
+    </option>
+    </select>
+<!--    <input class="form-input" type="text" id="occupation" name="occupation" placeholder="1 = student, 2 = farming, agriculture; semi-skilled,or unskilled worker; 3 = white-colloar; 4 = teacher counselor social worker, nurse; artist, writers; technician, skilled worker, 5 = managerial, administrative, business, 6 = professional with advanced degree">-->
+
+    <label for="husband_occ">Husband Occupation</label>
+    <select id="husband_occ" name="husband_occ">
+    <option value = 1> Student
+    </option>
+    <option value = 2> Farming,agriculture; semi-skilled, or unskilled worker;
+    </option>
+    <option value = 3> White-collar
+    </option>
+    <option value = 4> Teacher counselor social worker,nurse; artist, writers; technician, skilled worker
+    </option>
+    <option value = 5> Manegarial, administrative, business
+    </option>
+    <option value = 6> Professional with Advanced Degree
+    </option>
+    </select>
+<!--    <input class="form-input" type="text" id="dis" name="dis" placeholder="Enter Value for DIS..">-->
+
+    <label for="affair">AFFAIRS</label>
+    <input class="form-input" type="text" id="affair" name="affair" placeholder="Measure of Time Spent in ExtraMarital Affair..">
+
+
+
+
+    <input type="submit" value="PREDICT AFFAIR">
+  </form>
+  <br>
+  <br>
+  <h3>{{prediction_text}}</h3>
+</div>
+
+</body>
+</html>
+
+
