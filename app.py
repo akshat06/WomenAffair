@@ -6,7 +6,7 @@ import sklearn
 app = Flask(__name__)
 model = pickle.load(open('final_model.pkl','rb'))
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 @cross_origin()
 def home():
     return render_template("home.html")
