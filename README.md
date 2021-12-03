@@ -1,3 +1,3 @@
 # WomenAffair
 
-https://dashboard.heroku.com/apps/women-affair/deploy/heroku-git
+https://women-affair.herokuapp.com/
